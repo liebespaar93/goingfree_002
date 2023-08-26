@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+/* font */
+
+@font-face {
+    font-family: 'MY';
+    src: url(../font/NanumBrushScript-Regular.ttf)
+}
+/* font-family: 'My',cursive */
+@font-face {
+    font-family: 'Gothic';
+    src: url(../font/NanumGothicCoding-Regular.ttf)
+}
+/* font-family: 'Gothic',cursive */
+
+
+
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+/* force scrollbar, not necessary, but may reduce gaps. Setting a max-height on .carousel also works */
+html { overflow-y: scroll; }
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel img {
+  display: block;
+  height: 400px;
+}
+
+
+/* layout */
+#header {height: 400px; background: no-repeat center top /contain;}
+body {background-color: rgba(0,0,0,0.1);}
+#tit {background-color: rgba(255,255,255,0.8);border-bottom: 1px solid #999}
+
+
+/* cont */
+#contents {}
+#contents .container {border-right: 1px solid #999; border-left: 1px solid #999;}
+#cont_left {float: left; width: 250px; }
+#cont_center {overflow: hidden; margin-right: 250px; border-right: 1px solid #999; border-left: 1px solid #999; min-height: 1200px}
+#cont_right {width: 250px; position: absolute; right: 0;top: 0; }
+
+/* footer */
+#footer {width: 100% ;height: 120px;border-top: 1px solid #999;  }
+
+/* container */
+.container {position: relative; width: 1280px; margin: 0 auto; background: rgba(0,0,0,0.03);font-size: 10px}
+
+
+
+/* row */
+.row {padding: 0 15px}
+
+
+/* quick */
+.quick {text-align: right;}
+.quick a {color: #fff; padding: 4px 0 4px 10px; display: inline-block; transition: color 0.3s ease;}
+.quick a:hover {color: #ccc;}
+
+/* title */
+.title {text-align: center; text-transform: uppercase;  font-family: 'My',cursive;margin-top: 50px}
+.title p {font-size: 28px; color: #fff; background-color: #202; display: inline; padding: 10px 20px; font-weight: 600; border-radius: 5px;}
+.title h1 a {color: #202; background-color: #fff; display: inline-block; font-size: 20px; padding: 5px 20px; transition: 0.3s ease, box-shadow 1.3s ease; text-decoration: none;border-radius: 5px;}
+.title h1 a:hover { 
+    color: #fff;
+    box-shadow: 
+        0 0 0 100px rgba(0,0,0,0.8) inset;
+}
+
+/* icon */
+.icon {text-align: center; margin-top: 40px}
+.icon ul { }
+.icon li {display: inline; margin: 0 2px;}
+.icon li a {position: relative; display: inline-block; width: 50px; height: 50px; background-color: #fff; color: #000; font-size: 26px; border-radius: 50%; }
+.icon li a i {line-height: 50px}
+.icon li a span {opacity: 0; position: absolute; font-size: 12px; left:50%;transform: translate(-50%); top:-20px; background: #000; color: #fff; padding: 1px 7px; border-radius: 3px; transition: all 0.5s ease-in-out; white-space: nowrap}
+.icon li a span:before {content: ''; position: absolute; left: 50%; bottom: -5px; 
+    margin-left: -5px;
+    border-top : 5px solid black;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    
+}
+.icon li a:hover span {opacity: 1; top: -25px;}
+
+/* nav */
+.nav {padding: 30px 0}
+.nav h2 {font-size: 20px; color: black; padding-bottom: 5px; font-family: "MY",cursive;}
+.nav li {position: relative; float: left; width: 20%; padding-bottom: 2px; padding-left: 9px; box-sizing: border-box; }
+.nav li:before {content: ''; width: 3px; height: 3px; border-radius: 100%; background: black; position: absolute;left: -2px;top: 5px;}
+.nav li a {padding: 2px 2px; border-style: 2px;}
+.nav li a:hover {background-color: black; color: white; transition: 1s ease; text-decoration: none;border-radius: 5px}
+
+
+/* tit */
+.tit {text-align: center; padding: 10px; }
+.tit h2{font-family: "MY",cursive;font-size: 40px}
+.tit .tit_btn {position:absolute; right: 10px; top: 5px;position: absolute; display: inline-block; width: 50px; height: 50px; background-color: #fff; color: #000; font-size: 26px; border-radius: 50%;}
+.tit .tit_btn i {line-height: 50px}
+.tit .tit_btn:hover {background-color: rgba(0,0,0,0.3); color:white; transition: 1s ease;}
+
+/* cbox */
+.cbox {padding: 15px; border-bottom: 1px solid #999;}
+.cbox .cbox_tit {font-size: 20px; color: black; text-transform: uppercase;font-family: "MY",cursive; padding-bottom: 5px;}
+.cbox .cbox_desc {border-bottom: 1px dashed #999; padding-bottom: 15px; margin-bottom: 15px; color: black; line-height: 18px; }
+.cbox.box1 { }
+.cbox.box2 { }
+.cbox.box3 {border-bottom: 0; }
+.cbox.box4 { }
+.cbox.box5 { }
+.cbox.box6 {border-bottom: 0; }
+.cbox.box7 { }
+.cbox.box8 { }
+.cbox.box9 {border-bottom: 0; }
+
+/* menu */
+.menu li {position: relative;}
+.menu li a {text-align: left;text-indent: 10px;font-size: 20px; font-family: "MY", cursive;text-transform: uppercase; color: black; padding: 7px ; display: block;background-color: white; border-top-left-radius: 20px;border-top-right-radius: 20px; border-bottom-left-radius: 20px;border-bottom-right-radius: 20px ;margin: 5px 5px 5px 0px; box-shadow: 2s ease;transition: 0.3s ease, box-shadow 1.3s ease;}
+.menu li a i {position: absolute; right: 20px ;top: 7px }
+.menu li a:hover {text-decoration: none; color: white; transition: 1s ease; background-color: black;    box-shadow: 0 0 0 20px rgba(0,0,0,0.8) inset;}
+
+
+
+/* notice */
+.notice {position: relative}
+.notice h5 {font-size: 25px; font-family: "MY" ,cursive; }
+.notice li {position: relative; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;padding-left: 6px; line-height: 16px; display: box;}
+.notice li:before {content: "";width: 3px;height: 3px; border-radius: 50%;background-color: black;position: absolute;left: 0;top: 7px;}
+.notice .more {position: absolute;top: 8px;right: 0;}
+
+
+/* blog */
+.blog h5 {font-size: 14px; color: black; padding-bottom: 3px }
+.blog .blog_img {display: block;position: relative}
+.blog .blog_img:before {content: ''; width: 100%; height: 100%; position: absolute;left: 0;top: 0;transition: 1s ease-in-out}
+.blog .blog_img:hover:before {background-color: rgba(0,0,0,0.45);}
+.blog .blog_img em {opacity: 0; position: absolute;left: 50%;top: 50%;color: white;transform: translate(-50%,-50%);transition: 2s;}
+.blog .blog_img:hover em {opacity: 1}
+
+.blog2 h5 {font-size: 14px; color: black; padding-bottom: 3px }
+.blog2 .blog_img {display: block;position: relative;overflow: hidden}
+.blog2 .blog_img:after {content: ''; width: 100%; height: 100%; position: absolute;left: 0;top: 0;transition: 1s ease-in-out}
+.blog2 .blog_img:hover:after {background-color: rgba(0,0,0,0.45);}
+.blog2 .blog_img img {transform: scale(1,1); transition: 1s ease-in-out}
+.blog2 .blog_img:hover img {transform: scale(1.2,1.2);}
+.blog2 .blog_img em {opacity: 0; position: absolute;left: 50%;top: 50%;color: white;transform: translate(-50%,-50%);transition: 2s;z-index: 100;}
+.blog2 .blog_img:hover em {opacity: 1}
+
+/* slider */
+.slider {height: 420px;}
+
+
+/* video */
+.wrap{width:500px; width:100%;}
+.playbox {position:relative; padding-top:56%; width:100%;}
+video {position: absolute; top: 0;left: 0;width: 100%;height: auto;}
+
+/* square */
+.square {height: 170px ; overflow: hidden;}
+.square a {position: relative;float: left;width: 19%;margin: 0.5%; height: 45%; top: 0; }
+.square a:before {content: 'image';position: absolute; left: 50%;top: 50%; transform: translate(-50%,-50%);opacity: 0;transition: all 1s ease;color: white}
+.square a:hover:before {opacity: 1}
+.square a img {resize: both;height: 100%;max-width: 100%;float: center; object-fit: cover}
+
+.square a img:hover {filter: drop-shadow(5px 5px 10px black);}
+/* mediaquery 320 / 480 / 600 / 768 / 960 / 1024 / 1280 */
+@media (max-width: 1280px){
+    .container{width: 100%}
+    #contents .container{border: 0;}
+    
+}
+@media (max-width: 1024px){
+    .nav li {width: 25%;}
+}
+@media (max-width: 960px){
+    .nav li {width: 33.3333%;}
+    #cont_center {margin-right: 0; border-right: 0;}
+    #cont_right {position: static; width: 100%;border-top: 1px solid #999;}
+    .square a {width: 24%;}
+}
+@media (max-width: 968px){
+    
+}
+@media (max-width: 600px){
+    .nav li {width: 50%;}
+    #cont_left {float: none; width: 100%;}
+    #cont_center {border-bottom: 1px solid #999; min-height: auto;}
+    .tit .tit_btn {display: none;}
+    #header {height: 300px;}
+    .nav {display: none;}
+    .cbox.box1 {padding: 0; border-bottom: 0;}
+    .cbox.box1 .menu li a i {display: none;}
+    .cbox.box1 .cbox_tit {display: none;}
+    .cbox.box1 .cbox_desc {display: none;}
+    .cbox.box1 .menu ul {overflow: hidden; }
+    .cbox.box1 .menu li {float: left; width: 33.333%; text-align: center; box-sizing: border-box;}
+    .square a {width: 49%;}
+    
+    
+}
+@media (max-width: 480px){
+    
+}
+@media (max-width: 320px){
+    
+}

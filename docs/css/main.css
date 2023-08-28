@@ -6,8 +6,8 @@
 	--side-bar-color: #ece9e5;
 	--side-bar-line-color: #c6c7c9;
 	--side-bar-pofile-color: #f3e2cf;
+	--side-background-default: #14141b;
 	/* color */
-	--background-default: #14141b;
 }	
 
 #main {
@@ -19,7 +19,7 @@
 
 /** sidebar **/
 #main #sidebar {
-	background-color: var(--background-default);
+	background-color: var(--side-background-default);
 	position: relative;
 	width: var(--side-bar-width);
 	display: inline;
@@ -37,6 +37,12 @@
     margin:auto;
 	position: relative;
 }
+
+#main #sidebar #profile #image_box:hover {
+	box-shadow: 0px 0px 5px 4px #3f3d3d,
+		0px 0px 10px 5px #fff8f8;
+}
+
 
 #main #sidebar #profile #info_box {
 	padding-top: 8px;
@@ -126,7 +132,7 @@
 #main #contents{
 	background-color: #64cbed;
 	position: relative;
-	width: calc(100vw - var(--side-bar-width));
+	flex: 1;
 	display: inline;
 	overflow-y: scroll;
 }

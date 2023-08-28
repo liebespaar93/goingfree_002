@@ -1,0 +1,133 @@
+
+:root {
+	/* main */
+	--side-bar-width: 24vw;
+	--side-bar-uncolor: #aeaaa5;
+	--side-bar-color: #ece9e5;
+	--side-bar-line-color: #c6c7c9;
+	--side-bar-pofile-color: #f3e2cf;
+	/* color */
+	--background-default: #14141b;
+}	
+
+#main {
+	background-color: #fff;
+	position: relative;
+	display: flex;
+	height: calc(100vh - var(--footer-height) - var(--nav-height));
+}
+
+/** sidebar **/
+#main #sidebar {
+	background-color: var(--background-default);
+	position: relative;
+	width: var(--side-bar-width);
+	display: inline;
+	color: #aff;
+    max-width: 200px;
+}
+
+/*** profile ***/
+#main #sidebar #profile #image_box {
+	background-color: var(--side-bar-pofile-color);
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	border-radius: 100%;
+    margin:auto;
+	position: relative;
+}
+
+#main #sidebar #profile #info_box {
+	padding-top: 8px;
+    margin:auto;
+	font-family: 'Pacifico', 'sans-serif';
+	font-size: 16px;
+	color: var(--side-bar-color);
+	text-align: center;
+	text-transform: none!important;
+}
+#main #sidebar #profile #info_box::before {
+	content: "";
+	display: block;
+	width: 45%;
+	border-bottom: 1px solid var(--side-bar-line-color);
+	
+	margin: 8px auto;
+}
+#main #sidebar #profile #info_box::after {
+	content: "";
+	display: block;
+	width: 70%;
+	border-bottom: 3px double var(--side-bar-line-color);
+	margin: 8px auto;
+}
+
+/*** items ***/
+
+#main #sidebar #items ul {
+	font-size: 16px;
+	text-align: center;
+}
+
+#main #sidebar #items ul li {
+	color: var(--side-bar-uncolor);
+}
+#main #sidebar #items ul li:hover {
+	color: var(--side-bar-color);
+}
+
+#main #sidebar #items ul li::after{
+	content: "";
+	display: block;
+	width: 60%;
+	border-bottom: 1px solid var(--side-bar-line-color);
+	margin: 12px auto;
+}
+
+#main #sidebar #items ul li:last-child::after{
+	content: "";
+	border-bottom: 0px solid var(--side-bar-line-color);
+}
+
+/*** link ***/
+#main #sidebar #link {
+}
+
+#main #sidebar #link::before {
+	content: "";
+	display: block;
+	width: 70%;
+	border-bottom: 3px double var(--side-bar-line-color);
+	margin: 8px auto;
+}
+
+#main #sidebar #link ul {
+	font-size: 30px;
+    display:-webkit-flex;
+    text-align: center;
+}
+
+#main #sidebar #link ul li {
+	flex-grow: 1;
+    min-width: 30px;
+}
+#main #sidebar #link ul li a {
+	color: var(--side-bar-uncolor);
+}
+
+#main #sidebar #link ul li a:hover {
+	color: var(--side-bar-color);
+}
+
+/** sidebar **/
+
+/** contents **/
+#main #contents{
+	background-color: #64cbed;
+	position: relative;
+	width: calc(100vw - var(--side-bar-width));
+	display: inline;
+	overflow-y: scroll;
+}
+/** contents **/

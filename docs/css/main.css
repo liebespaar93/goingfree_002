@@ -1,12 +1,16 @@
 
 :root {
 	/* main */
+	/* side-bar */
 	--side-bar-width: 24vw;
 	--side-bar-uncolor: #aeaaa5;
 	--side-bar-color: #ece9e5;
 	--side-bar-line-color: #c6c7c9;
 	--side-bar-pofile-color: #f3e2cf;
 	--side-background-default: #14141b;
+	/* contents */
+	--contents-background-default: #bfbdbc;
+
 	/* color */
 }	
 
@@ -97,8 +101,8 @@
 }
 
 /*** link ***/
-#main #sidebar #link {
-}
+/* #main #sidebar #link {
+} */
 
 #main #sidebar #link::before {
 	content: "";
@@ -130,7 +134,7 @@
 
 /** contents **/
 #main #contents{
-	background-color: #64cbed;
+	background-color: var(--contents-background-default);
 	position: relative;
 	flex: 1;
 	display: inline;

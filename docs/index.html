@@ -84,9 +84,8 @@
 			</div>
 		</div>
 		<div id="contents">
-			<p>메인 컨텐스 입니다</p>
 			<div id="markdown">
-
+				
 			</div>
 		</div>
 	</div>
@@ -102,7 +101,23 @@
 			<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 		</div>
 	</footer>
-</body>
+	<script src="./js/remarkable.js"></script>
+	<script>
+		const xhr = new XMLHttpRequest()
 
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+				const md = new Remarkable()
+				const markdownContent = xhr.responseText
+				const html = md.render(markdownContent)
+				document.getElementById('markdown').innerHTML = html
+			}
+		}
+
+		const url = './mdFiles/test.md'
+		xhr.open('GET', url, true)
+		xhr.send()
+		document.getElementById('markdown').innerHTML = marked("# sss \n test");
+	</script>
+</body>
 </html>
-<css reset>

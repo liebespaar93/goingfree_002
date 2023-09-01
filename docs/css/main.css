@@ -24,9 +24,9 @@
 /** sidebar **/
 #main #sidebar {
 	background-color: var(--side-background-default);
+	height: 100%;
 	position: relative;
 	width: var(--side-bar-width);
-	display: inline;
 	color: #aff;
     max-width: 200px;
 }

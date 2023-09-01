@@ -1,0 +1,48 @@
+
+/* root */
+:root {
+	/* nav */
+	--nav-height: 72px;
+	--nav-background-default: #1e1e20bd;
+}
+/* root end */
+
+/* nav */
+/* 추후 수정 */
+nav {
+    position: relative;
+    width: 100%;
+    z-index: 900;
+	background-color: var(--nav-background-default);
+	height: var(--nav-height);
+	color: aqua;
+}
+nav #container-title {
+	display: flex;
+	font-size: 30px;
+	font-family: 'Pacifico';
+}
+nav #title {
+	color : white;
+	flex: 1;
+	text-align: center;
+}
+nav #menu-box {
+	position: absolute;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+	color : #fff;
+	margin: 4px;
+	border-radius: 100%;
+	font-size: 30px;
+	text-align: center;
+}
+
+nav #menu-box i {
+	padding: 0px;
+}
+/* nav #menu-box:hover {
+	box-shadow: 0px 0px 4px 4px rgba(255,255,255,0.3);
+} */
+/* nav end */

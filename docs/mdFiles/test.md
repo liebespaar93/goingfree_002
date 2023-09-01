@@ -53,7 +53,7 @@ Git 이벤트가 발생할때 작업하는 것
 └── README.md
 ```
 ### yaml 예시 파일
-``` yml title="action.yml" 
+```yml  title='action.yml'
 name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]

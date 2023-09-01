@@ -1,0 +1,12 @@
+
+/* box */
+.circle_box {
+	width: 90%;
+	height: 90%;
+	border-radius: 100%;
+	overflow: hidden;
+	left:50%;
+	top:50%;
+	transform:translate(5%,5%);
+}
+/* box */

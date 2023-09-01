@@ -1,0 +1,9 @@
+/* import */
+@import 'contents.css';
+@import 'footer.css';
+/* import end */
+
+#main {
+	background-color: #fff;
+	position: relative;
+}

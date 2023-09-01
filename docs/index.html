@@ -18,48 +18,37 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<link rel="stylesheet" href="css/body.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/header.css">
-
 	<link rel="stylesheet" href="css/flickity.css">
 
 	<!-- font-awsome -->
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.css">
 
-
-	<!-- webfont -->
-	<link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet" type="text/css">
-
 	<!-- html5 Support & ie Version Checker -->
 	<!-- <script src="bower_components/html5shiv/dist/html5shiv.js"></script> -->
 
 	<!-- jQuery -->
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
 	<!-- Markdown -->
 	<script src="./js/remarkable.js"></script>
 
 	<!-- include -->
 	<script src="./js/include.js"></script>
-
+	<script src="./js/header/header.js"></script>
+	<script src="./js/main/contents.js"></script>
 </head>
 
 <body>
-	<include include-html="./pages/nav.html"></include>
+	<header>
+		<include include-html="./pages/header/nav.html"></include>
+
+		<include include-html="./pages/header/sidebar.html"></include>
+	</header>
 	<div id="main">
-		<include include-html="./pages/sidebar.html"></include>
-		<div id="contents">
-			<include include-html="./pages/contents.html"></include>
-			<markdown include-md="./mdFiles/test.md">
-			</markdown>
-		</div>
+		<include include-html="./pages/main/contents.html"></include>
 	</div>
-	<include include-html="./pages/footer.html"></include>
 	
 	<script>
-		includeHTML();
-		includeMD();
+		include();
 	</script>
 </body>
 </html>

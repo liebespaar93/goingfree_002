@@ -1,0 +1,36 @@
+/* import */
+
+/* root */
+:root {
+	/* footer */
+	--footer-height: 72px;
+	--footer-color: #fff;
+	--footer-background-default: #393941b5;
+}	
+/* root end */
+
+/* footer */
+footer {
+	position: relative;
+	width: 100%;
+	bottom: 0px;
+	background-color: var(--footer-background-default);
+	height: var(--footer-height);
+	max-height: 80px;
+	overflow: hidden;
+	color: aquamarine;
+
+}
+
+footer #info {
+	color: var(--footer-color);
+}
+footer #icon {
+	display: block;
+	width: 100%;
+	text-align: right;
+	color: var(--footer-color);
+}
+footer #icon i {
+	font-size: 20px;
+}

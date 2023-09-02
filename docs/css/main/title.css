@@ -1,0 +1,70 @@
+:root {
+    /* title */
+    --title-height: 240px;
+    --title-background-color: #ffffff;
+    /* wave */
+
+    --wave-height: 60px;
+    --wave-color: var(--title-background-color);
+    --wave1-color: rgb(249, 226, 135);
+    --wave2-color: rgb(59, 219, 230);
+    --wave3-color: rgb(255, 31, 65);
+}
+
+
+#contents-title {
+    position: relative;
+    height: var(--title-height);
+    background-color: var(--title-background-color);
+    bottom: 0px;
+}
+
+#contents-title #title-container {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    font-size: 32px;
+}
+#contents-title section {
+    position: absolute;
+    width: 100%;
+    height: var(--wave-height);
+    bottom: 0;
+}
+#contents-title section #wave1 {
+    height: 100%;
+    animation: animate 40s linear infinite;
+    animation-delay: -10s;
+    filter: opacity(0.3) 
+        drop-shadow(0 0 0 var(--wave1-color))
+        drop-shadow(0 0 0 var(--wave1-color));
+}
+
+#contents-title section #wave2 {
+    height: 80%;
+    animation: animate 60s linear infinite;
+    animation-delay: -5s;
+    filter: opacity(0.3) 
+        drop-shadow(0 0 0 var(--wave2-color))
+        drop-shadow(0 0 0 var(--wave2-color));
+}
+#contents-title section #wave3 {
+    height: 60%;
+    animation: animate 30s linear infinite;
+    animation-delay: -18s;
+    filter: opacity(0.3) 
+        drop-shadow(0 0 0 var(--wave3-color))
+        drop-shadow(0 0 0 var(--wave3-color));
+
+}
+
+#contents-title section #wave4 {
+    height: 55%;
+    animation: animate 16s linear infinite;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0px;
+    filter: opacity(0.8) 
+        drop-shadow(0 0 0 var(--wave-color))
+        drop-shadow(0 0 0 var(--wave-color));
+}

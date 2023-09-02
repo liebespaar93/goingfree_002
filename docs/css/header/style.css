@@ -1,13 +1,5 @@
 /* import */
+@import 'header.css';
 @import 'nav.css';
 @import 'sidebar.css';
 /* import end */
-
-/* header */
-header {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-/* header end */

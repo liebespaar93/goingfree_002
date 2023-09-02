@@ -6,7 +6,7 @@
 	--side-bar-color: #ece9e5;
 	--side-bar-line-color: #c6c7c9;
 	--side-bar-pofile-color: #f3e2cf;
-	--side-background-default: #14141be1;
+	--side-background-default: #14141b96;
 	/* color */
 }	
 
@@ -18,13 +18,20 @@
 }
 
 #sidebar {
+    z-index: 900;
     position: relative;
-	background-color: var(--side-background-default);
 	height: 100%;
 	width: 100%;
-    z-index: 901;
 	color: #aff;
 	/* -webkit-filter: blur(1px); */
+}
+#sidebar #sidebar-container 
+{
+	z-index: 901;
+	height: 100%;
+	width: 30vw;
+	max-width: 240px;
+	background-color: var(--side-background-default);
 }
 
 /** profile **/
@@ -114,7 +121,8 @@
 }
 #sidebar #link #container-link {
 	margin: auto;
-	min-width: 120px;
+	width: 64%;
+	min-width: 100px;
 	max-width: 160px;
 	overflow-x: scroll;
 }

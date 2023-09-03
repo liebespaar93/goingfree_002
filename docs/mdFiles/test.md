@@ -1,3 +1,5 @@
+
+
 # hi
 ## test
 
@@ -8,42 +10,116 @@
 
 ![랑크](./img/photo/cat.jpg)
 
-이제 다됫다
+
+# 프레임 워크 구연
+## file-render
+  - 깊은 파일까지 렌더링 가능하게 만들어 준다.
+  ``` js
+  function innerHTML_file(elem, file, render) {
+      var xhr = new XMLHttpRequest();
+      var markdown_len;
+      xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+              if (this.readyState == 4) {
+                  if (this.status == 200) {
+                      if (render)
+                          elem.innerHTML = render.render(this.responseText);
+                      else
+                      {
+                          include_len = document.getElementsByTagName("include").length
+                          markdown_len = document.getElementsByTagName("markdown").length
+                          elem.innerHTML = this.responseText;
+                          if (markdown_len < document.getElementsByTagName("markdown").length)
+                              includeMD();
+                          if (include_len < document.getElementsByTagName("include").length)
+                              includeHTML();
+                      }
+                  }
+                  if (this.status == 404) {
+                      elem.innerHTML = "Page not found.";
+                  }
+              }
+          }
+      }
+      xhr.open("GET", file, true);
+      xhr.send();
+  }
+  ```
+## include
+  - html 파일을 추가하여 랜더링 해준다
+  ```html
+	<include include-html="./pages/header/nav.html"></include>
+  ```
+  파일을 참고 해준다
+  ``` js
+  function includeHTML() {
+      var target, file;
+      target = document.getElementsByTagName("include");
+      for (var i = 0; i < target.length; i++) {
+          file = target[i].getAttribute("include-html");
+          if (file && !target[i].classList.contains('include-load')) {
+              innerHTML_file(target[i], file, null);
+              target[i].classList.add('include-load')
+          }
+      }
+  }
+  ```
+## markdown
+  ```html
+    <markdown include-md="./mdFiles/test.md"></markdown>
+  ```
+  ``` js
+  function includeMD() {
+      var target, file;
+      target = document.getElementsByTagName("markdown");
+      for (var i = 0; i < target.length; i++) {
+          file = target[i].getAttribute("include-md");
+          if (file && !target[i].classList.contains('include-load')) {
+              const md = new Remarkable()
+              innerHTML_file(target[i], file, md);
+              target[i].classList.add('include-load')
+          }
+      }
+  }
+  ```
+# code block 꾸미기
+  ## 코드 language 추가해주기
+  ``` css
+  :root{
+      --code-language-shadow : #000;
+  }
+  markdown pre {
+      position: relative;
+      background-color: #aaa;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 10px;
+  }
+  markdown pre code {
+      position: relative;
+      display: block;
+      width: 100%;
+      overflow-x:scroll;
+  }
+  markdown pre code[class="language-bash"]::before {
+      content: "bash";
+      color: #fff;
+      text-shadow: 0px 0px 2px var(--code-language-shadow),0px 0px 2px var(--code-language-shadow);
+      position: relative;
+      display: block;
+      background-color: #444444;
+      width: 100px;
+      text-align: center;
+      border-radius: 0% 0% 120px 0%;
+  }
+  ```
+
+
 # 링크
-### 깃허브 doc
+## 깃허브 doc
 [깃허브 doc action](https://docs.github.com/ko/actions)
 
----
-### 마크다운
-[마크다운](https://www.markdownguide.org/basic-syntax/)  
-[마크다운 Mermaid](http://mermaid.js.org/syntax/timeline.html) 
-
----
-# git_action
-git action 사용법
-
-아주긴 문장입니다. abccdefghijklmnop0`123456789` test all long word in markdown notes over flow 
-
-# action 이란 
-Git 이벤트가 발생할때 작업하는 것
-
-## 구성
-### workflow
-- yaml파일로 만들어진 이벤트에 따라 실행 되는것
-### event
-- 깃 레포지토리에 무언가 이벤트가 생겼을때 
-### jobs
-- yml 파일에 써저있는 해야할 일
-### action
-- 뭐 이건.. 그냥 액션 그자체
-### runner
-- 워크플로우 os 선택하는거 같은 느낌
-
-### 위치
-- ``` .github/workflows/ ``` 에 만든다 
-
-
-
+# git Action 예시
 ``` bash
 ├── .github
 │   ├── workflows
@@ -68,3 +144,8 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
 ```
+---
+## 마크다운
+[마크다운](https://www.markdownguide.org/basic-syntax/)  
+[마크다운 Mermaid](http://mermaid.js.org/syntax/timeline.html) 
+

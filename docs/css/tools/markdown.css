@@ -7,6 +7,7 @@ markdown pre {
     background-color: #aaa;
     border-radius: 10px;
     overflow: hidden;
+    margin: 10px;
 }
 markdown pre code {
     position: relative;
@@ -16,22 +17,10 @@ markdown pre code {
 }
 
 
-markdown pre code[class="language-css"]::before {
-    content: "css";
-    color: rgb(255, 255, 255);
-    text-shadow: 0px 0px 2px var(--code-language-shadow),0px 0px 2px var(--code-language-shadow);
-    position: relative;
-    display: block;
-    background-color: rgb(0, 13, 255);
-    width: 100px;
-    text-align: center;
-    border-radius: 0% 0% 120px 0%;
-}
-
 
 markdown pre code[class="language-bash"]::before {
     content: "bash";
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-shadow: 0px 0px 2px var(--code-language-shadow),0px 0px 2px var(--code-language-shadow);
     position: relative;
     display: block;
@@ -40,13 +29,52 @@ markdown pre code[class="language-bash"]::before {
     text-align: center;
     border-radius: 0% 0% 120px 0%;
 }
+markdown pre code[class="language-html"]::before {
+    content: "html";
+    color: #fff;
+    text-shadow: 0px 0px 2px var(--code-language-shadow),0px 0px 2px var(--code-language-shadow);
+    position: relative;
+    display: block;
+    background-color: #ff3700;
+    width: 100px;
+    text-align: center;
+    border-radius: 0% 0% 120px 0%;
+}
 
-markdown pre code[class="language-yml"]::before {
-    content: "yaml";
-    color: rgb(255, 255, 255);
+
+markdown pre code[class="language-css"]::before {
+    content: "css";
+    color: #fff;
+    text-shadow: 0px 0px 2px var(--code-language-shadow),0px 0px 2px var(--code-language-shadow);
+    position: relative;
+    display: block;
+    background-color: #0015ff;
+    width: 100px;
+    text-align: center;
+    border-radius: 0% 0% 120px 0%;
+}
+
+
+markdown pre code[class="language-js"]::before {
+    content: "js";
+    color: #fff;
+    text-shadow: 0px 0px 2px var(--code-language-shadow),0px 0px 2px var(--code-language-shadow);
     position: relative;
     display: block;
     background-color: #ffea00;
+    width: 100px;
+    text-align: center;
+    border-radius: 0% 0% 120px 0%;
+}
+
+
+markdown pre code[class="language-yml"]::before {
+    content: "yaml";
+    color: #fff;
+    text-shadow: 0px 0px 2px var(--code-language-shadow),0px 0px 2px var(--code-language-shadow);
+    position: relative;
+    display: block;
+    background-color: #ff51df;
     width: 100px;
     text-align: center;
     border-radius: 0% 0% 120px 0%;

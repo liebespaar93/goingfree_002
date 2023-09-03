@@ -1,13 +1,58 @@
+:root{
+    --code-language-shadow : #000;
+}
+
 markdown pre {
     position: relative;
     background-color: #aaa;
-    /* overflow-x: scroll; */
+    border-radius: 10px;
+    overflow: hidden;
 }
 markdown pre code {
     position: relative;
     display: block;
     width: 100%;
-    /* text-overflow: inherit; */
-    /* width: 100px; */
-    overflow-x:auto;
+    overflow-x:scroll;
 }
+
+
+markdown pre code[class="language-css"]::before {
+    content: "css";
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 2px var(--code-language-shadow),0px 0px 2px var(--code-language-shadow);
+    position: relative;
+    display: block;
+    background-color: rgb(0, 13, 255);
+    width: 100px;
+    text-align: center;
+    border-radius: 0% 0% 120px 0%;
+}
+
+
+markdown pre code[class="language-bash"]::before {
+    content: "bash";
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 2px var(--code-language-shadow),0px 0px 2px var(--code-language-shadow);
+    position: relative;
+    display: block;
+    background-color: #444444;
+    width: 100px;
+    text-align: center;
+    border-radius: 0% 0% 120px 0%;
+}
+
+markdown pre code[class="language-yml"]::before {
+    content: "yaml";
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: block;
+    background-color: #ffea00;
+    width: 100px;
+    text-align: center;
+    border-radius: 0% 0% 120px 0%;
+}
+
+/* markdown pre code[title]::before {
+    content: $content += "aa";
+    background-color: #444444;
+} */

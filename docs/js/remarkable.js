@@ -3981,14 +3981,17 @@ rules.fence = function(tokens, idx, options, env, instance) {
     //
 
     fences = token.params.split(/\s+/g);
-    fenceName = fences.join(' ');
+    langPrefix += fences[0];
+    let a = fences.splice(1);
+    fenceName = a.join(' ');
+    console.log(fences,fenceName)
 
     if (has(instance.rules.fence_custom, fences[0])) {
       return instance.rules.fence_custom[fences[0]](tokens, idx, options, env, instance);
     }
 
     langName = escapeHtml(replaceEntities(unescapeMd(fenceName)));
-    langClass = ' class="' + langPrefix + langName + '"';
+    langClass = ' class="' + langPrefix + '"' + langName;
   }
 
   if (options.highlight) {

@@ -24,6 +24,7 @@
 
 #contents #contents-box #notes{
     padding: 20px;
+    overflow-x: hidden;
 }
 
 #contents #table-contents {

@@ -1,0 +1,13 @@
+markdown pre {
+    position: relative;
+    background-color: #aaa;
+    /* overflow-x: scroll; */
+}
+markdown pre code {
+    position: relative;
+    display: block;
+    width: 100%;
+    /* text-overflow: inherit; */
+    /* width: 100px; */
+    overflow-x:auto;
+}

@@ -36,18 +36,19 @@
 	<script src="./js/header/header.js"></script>
 	<script src="./js/main/contents.js"></script>
 	<script src="./js/tools/event-ctr.js"></script>
+	<script src="./js/tools/wave.js"></script>
+	<script src="./js/tools/darkmode.js"></script>
 </head>
 
 <body>
 	<header>
 		<include include-html="./pages/header/nav.html"></include>
-
 		<include include-html="./pages/header/sidebar.html"></include>
 	</header>
 	<div id="main">
+		<include include-html="./pages/main/darkmode.html"></include>
 		<include include-html="./pages/main/main.html"></include>
 	</div>
-	
 	<script>
 		include();
 	</script>

@@ -3,7 +3,18 @@
 :root {
 	/* nav */
 	--nav-height: 72px;
-	--nav-background-default: #1e1e20bd;
+	--nav-background-color: #1e1e20bd;
+		/** dark **/
+		--nav-background-color-dark: #ffffffbd;
+		/** light **/
+		--nav-background-color-light: #1e1e20bd;
+	/* title */
+	--nav-title-color: #ffffff;
+		/** dark **/
+		--nav-title-color-dark: #1e1e20;
+		/** light **/
+		--nav-title-color-light: #ffffff;
+
 }
 /* root end */
 
@@ -13,7 +24,7 @@ nav {
     position: relative;
     width: 100%;
     z-index: 900;
-	background-color: var(--nav-background-default);
+	background-color: var(--nav-background-color);
 	height: var(--nav-height);
 	color: aqua;
 }
@@ -23,7 +34,7 @@ nav #container-title {
 	font-family: 'Pacifico';
 }
 nav #container-title #title {
-	color : white;
+	color : var(--nav-title-color);
 	flex: 1;
 	text-align: center;
 }

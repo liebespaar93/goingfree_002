@@ -3984,7 +3984,6 @@ rules.fence = function(tokens, idx, options, env, instance) {
     langPrefix += fences[0];
     let a = fences.splice(1);
     fenceName = a.join(' ');
-    console.log(fences,fenceName)
 
     if (has(instance.rules.fence_custom, fences[0])) {
       return instance.rules.fence_custom[fences[0]](tokens, idx, options, env, instance);

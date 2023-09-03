@@ -1,11 +1,19 @@
+:root
+{
+    --wave-image: url(../../img/animation/wave.png);
+        /** dark **/
+        --wave-image-dark: url(../../img/animation/wavedark.png);
+        /** light **/
+        --wave-image-light: url(../../img/animation/wave.png);
+}
+
 section .wave {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000;
-    background: url(../../img/animation/wave.png);
+    background: var(--wave-image);
     background-size: 1000px 100%;
     
 }

@@ -1,17 +1,32 @@
 
 :root {
-	/* main */
-	/* contents */
-	--contents-background-default: #cb4908;
+    /* --table-contents */
     --table-contents-color: #ffffffdd;
-    --table-contents-background-color: #817e7ea9;
-    --table-contents-line-color: #ffffff;
+    --table-contents-background-color: #b5ababa9;
+    --table-contents-line-color: #ffffffdd;
+        /** dark mode **/
+        --table-contents-color-dark: #ebebebdd;
+        --table-contents-background-color-dark: #272626a9;
+        --table-contents-line-color-dark: #807f7f;
+        /** light mode **/
+        --table-contents-color-light: #ffffffdd;
+        --table-contents-background-color-light: #b5ababa9;
+        --table-contents-line-color-light: #ffffffdd;
+    /* note */
+    --note-color: #323232;
+    --note-background-color: #ffffff;
+        /** dark mode **/
+        --note-color-dark: #ffffff;
+        --note-background-color-dark: #323232;
+        /** light mode **/
+        --note-color-light: #323232;
+        --note-background-color-light: #ffffff;
+
 	/* color */
 }	
 
 /* contents */
 #contents{
-	background-color: var(--contents-background-default);
     width: 100%;
 	position: relative;
 	display: inline;
@@ -23,6 +38,8 @@
 }
 
 #contents #contents-box #notes{
+    color: var(--note-color);
+    background-color: var(--note-background-color);
     padding: 20px;
     overflow-x: hidden;
 }
@@ -66,7 +83,6 @@
 }
 
 #contents #table-contents #table-contents-container #table-contents-title{
-    
     display: block;
     line-height: 32px;
 }

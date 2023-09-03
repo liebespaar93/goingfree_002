@@ -14,6 +14,7 @@
 # 프레임 워크 구연
 ## file-render
   - 깊은 파일까지 렌더링 가능하게 만들어 준다.
+  - 문제점 : 이미 확인한 파일을 깊어질 수록 더욱 많이 확인한다 이것을 해결하기 위해 틀어난 배열 크기만큼만 랜더링 하게 필요
   ``` js
   function innerHTML_file(elem, file, render) {
       var xhr = new XMLHttpRequest();
@@ -68,6 +69,7 @@
   ```html
     <markdown include-md="./mdFiles/test.md"></markdown>
   ```
+  - md 파일을 추가하여 랜더링 해준다
   ``` js
   function includeMD() {
       var target, file;
@@ -113,7 +115,21 @@
       border-radius: 0% 0% 120px 0%;
   }
   ```
+# 목차 꾸미기 
+```css 
+markdown h1 {
+    font-size: calc(var(--markdown-font-size-std) * 4);
+    font-weight: 800;
+}
 
+markdown h1::before {
+    content: "";
+    font-size: calc(var(--markdown-font-size-std) * 3);
+    border: 3px solid var(--markdown-line-color);
+    margin-left: calc(var(--markdown-tab-space) * 0);
+    margin-right: calc(var(--markdown-tab-space) * 2);
+}
+```
 
 # 링크
 ## 깃허브 doc

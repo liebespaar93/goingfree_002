@@ -1,5 +1,15 @@
 :root{
-    --markdown--codeblock-language-shadow : #000;
+    /* codeblock */
+    --markdown-codeblock-language-shadow : #000;
+    --markdown-codeblock-color: #f5f5f5;
+    --markdown-codeblock-backgroundcolor: #282828;
+        /** dark **/
+        --markdown-codeblock-color-dark: #f3f3f3;
+        --markdown-codeblock-backgroundcolor-dark: #000000;
+        /** light **/
+        --markdown-codeblock-color-light: #fff;
+        --markdown-codeblock-backgroundcolor-light: #3a3a3a;
+
     --markdown-line-color: #fadc44;
     --markdown-font-size-std: 8px;
     --markdown-tab-space: 8px;
@@ -61,11 +71,14 @@ markdown h4 {
 /* code block */
 markdown pre {
     position: relative;
-    background-color: #aaa;
+    color: var(--markdown-codeblock-color);
+    background-color: var(--markdown-codeblock-backgroundcolor);
     border-radius: 10px;
+    padding-bottom: 10px;
     overflow: hidden;
     margin: 10px;
 }
+
 markdown pre code {
     position: relative;
     display: block;
@@ -78,7 +91,7 @@ markdown pre code {
 markdown pre code[class="language-bash"]::before {
     content: "bash";
     color: #fff;
-    text-shadow: 0px 0px 2px var(--markdown--codeblock-language-shadow),0px 0px 2px var(--markdown--codeblock-language-shadow);
+    text-shadow: 0px 0px 2px var(--markdown-codeblock-language-shadow),0px 0px 2px var(--markdown-codeblock-language-shadow);
     position: relative;
     display: block;
     background-color: #444444;
@@ -89,7 +102,7 @@ markdown pre code[class="language-bash"]::before {
 markdown pre code[class="language-html"]::before {
     content: "html";
     color: #fff;
-    text-shadow: 0px 0px 2px var(--markdown--codeblock-language-shadow),0px 0px 2px var(--markdown--codeblock-language-shadow);
+    text-shadow: 0px 0px 2px var(--markdown-codeblock-language-shadow),0px 0px 2px var(--markdown-codeblock-language-shadow);
     position: relative;
     display: block;
     background-color: #ff3700;
@@ -102,7 +115,7 @@ markdown pre code[class="language-html"]::before {
 markdown pre code[class="language-css"]::before {
     content: "css";
     color: #fff;
-    text-shadow: 0px 0px 2px var(--markdown--codeblock-language-shadow),0px 0px 2px var(--markdown--codeblock-language-shadow);
+    text-shadow: 0px 0px 2px var(--markdown-codeblock-language-shadow),0px 0px 2px var(--markdown-codeblock-language-shadow);
     position: relative;
     display: block;
     background-color: #0015ff;
@@ -115,7 +128,7 @@ markdown pre code[class="language-css"]::before {
 markdown pre code[class="language-js"]::before {
     content: "js";
     color: #fff;
-    text-shadow: 0px 0px 2px var(--markdown--codeblock-language-shadow),0px 0px 2px var(--markdown--codeblock-language-shadow);
+    text-shadow: 0px 0px 2px var(--markdown-codeblock-language-shadow),0px 0px 2px var(--markdown-codeblock-language-shadow);
     position: relative;
     display: block;
     background-color: #ffea00;
@@ -128,7 +141,7 @@ markdown pre code[class="language-js"]::before {
 markdown pre code[class="language-yml"]::before {
     content: "yaml";
     color: #fff;
-    text-shadow: 0px 0px 2px var(--markdown--codeblock-language-shadow),0px 0px 2px var(--markdown--codeblock-language-shadow);
+    text-shadow: 0px 0px 2px var(--markdown-codeblock-language-shadow),0px 0px 2px var(--markdown-codeblock-language-shadow);
     position: relative;
     display: block;
     background-color: #ff51df;

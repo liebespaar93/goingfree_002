@@ -210,4 +210,6 @@ jobs:
 ## 마크다운
 [마크다운](https://www.markdownguide.org/basic-syntax/)  
 [마크다운 Mermaid](http://mermaid.js.org/syntax/timeline.html) 
-
+---
+## 학습 필요한것 
+[commonjs와 esmodules](https://yoeubi28.medium.com/commonjs-esm-%EB%AA%A8%EB%93%88-%EC%88%9C%ED%99%98-%EC%B0%B8%EC%A1%B0-%EC%B0%A8%EC%9D%B4-e5cd1047deaf)

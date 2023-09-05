@@ -53,7 +53,7 @@ markdown h3::before {
     font-size: calc(var(--markdown-font-size-std) * 2);
     border: 2px solid var(--markdown-line-color);
     margin-left: calc(var(--markdown-tab-space) * 4);
-    margin-right: calc(var(--markdown-tab-space) * 0);
+    margin-right: calc(var(--markdown-tab-space) * 0.5);
 }
 
 

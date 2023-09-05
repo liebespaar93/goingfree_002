@@ -1,6 +1,6 @@
 function innerHTML_file(elem, file, render) {
     var xhr = new XMLHttpRequest();
-    var markdown_len;
+    var markdown_len, include_len;
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (this.readyState == 4) {

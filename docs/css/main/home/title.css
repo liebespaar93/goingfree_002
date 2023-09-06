@@ -1,0 +1,41 @@
+:root {
+    --home-title-img: url(./../../../img/9jedit/그대가\ 보낸\ 새벽의\ 조각을\ 보았습니다.jpeg);
+    --home-title-img-position : var(--home-title-img-position-light);
+    --home-background-color: var(--main-background-color);
+        /** dark **/
+        --home-title-img-dark: url(./../../../img/9jedit/같은\ 밤하늘을\ 올려다보는.jpeg);
+        --home-title-img-position-dark : -20%;
+        /** light **/
+        --home-title-img-light: url(./../../../img/9jedit/그대가\ 보낸\ 새벽의\ 조각을\ 보았습니다.jpeg);
+        --home-title-img-position-light : -40%;
+}
+#home-title{
+    position: relative;
+    display: block;
+    height: 80vh;
+    max-height: 1700px;
+    overflow: hidden;
+}
+#home-title #home-title-container {
+    display: block;
+}
+#home-title #home-title-container #home-title-canvas 
+{
+    background-color: var(--home-background-color);
+    width: 100%;
+    height: 100%;
+}
+#home-title #home-title-container #home-title-canvas #title-img-center {
+    width: 100%;
+    background-color: var(--main-background-color);
+    display: block;
+    text-align: center;
+}
+#home-title #home-title-container #home-title-canvas #title-img-center #title-img {
+    margin: auto;
+    background-color: var(--home-background-color);
+    content: var(--home-title-img);
+    max-width: var(--main-max-width);
+    max-height: 80vh;
+    min-height: 600px;
+}

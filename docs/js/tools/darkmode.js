@@ -13,6 +13,7 @@ function darkmode_toggle()
     document.getElementById("darkmode-dark").classList.toggle('darkmode-display-none');
     document.getElementById("darkmode-light").classList.toggle('darkmode-display-none');
     wave_darkmode_toggle();
+    main_darkmode_toggle();
     contents_darkmode_toggle();
     markdown_codeblock_darkmode_toggle();
 }

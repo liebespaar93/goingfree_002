@@ -1,0 +1,11 @@
+:root {
+    --category-color: var(--main-color);
+    --category-background-color: var(--main-background-color);
+}
+
+
+
+#category {
+    color: var(--category-color);
+    background-color: var(--category-background-color);
+}

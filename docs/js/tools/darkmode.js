@@ -15,5 +15,6 @@ function darkmode_toggle()
     wave_darkmode_toggle();
     main_darkmode_toggle();
     contents_darkmode_toggle();
+    home_darkmode_toggle();
     markdown_codeblock_darkmode_toggle();
 }

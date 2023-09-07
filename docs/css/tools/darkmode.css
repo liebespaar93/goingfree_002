@@ -16,8 +16,8 @@
     display: block;
     position: absolute;
     z-index: 990;
-    width: 30px;
-    height: 30px;
+    width: 5vw;
+    height: 5vw;
     right: 0px;
     bottom: 0px;
     border-radius: 100%;

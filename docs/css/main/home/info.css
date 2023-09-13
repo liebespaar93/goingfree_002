@@ -1,0 +1,55 @@
+:root {
+    --info-color: var(--main-color);
+    --info-background-color: var(--main-background-color);
+}
+
+#info {
+    position: relative;
+    color: var(--info-color);
+    background-color: var(--info-background-color);
+    display: block;
+
+}
+
+#info #notice {
+    width: 100%;
+    background-color: aquamarine;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#info #notice #notice-container {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    background-color: rgb(255, 242, 160);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#info #notice #notice-container #notice-img {
+    position: absolute;
+    content: url(./../../../img/icon/notice.png);
+    max-width: 100px;
+    width: 40px;
+    height: 40px;
+    max-block-size: 100px;
+    left: -15px;
+    top: -15px;
+}
+
+#info #page-type{
+    background-color: rgb(238, 210, 166);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#info .info-box{
+    width: 80%;
+    
+    background-color: aqua;
+}

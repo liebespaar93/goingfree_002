@@ -1,9 +1,6 @@
 /* import */
-
 @import 'main.css';
+@import 'contents.css';
 @import 'footer.css';
-/** home **/
-@import './home/style.css';
-/** contents **/
-@import './contents/style.css';
+@import 'title.css';
 /* import end */

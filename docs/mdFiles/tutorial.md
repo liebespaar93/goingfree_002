@@ -30,7 +30,6 @@
                             include_len = document.getElementsByTagName("include").length
                             markdown_len = document.getElementsByTagName("markdown").length
                             elem.innerHTML = this.responseText;
-                            //$(elem).html(this.responseText); <== 자동 script를 위하여 변경
                             if (markdown_len < document.getElementsByTagName("markdown").length)
                                 includeMD();
                             if (include_len < document.getElementsByTagName("include").length)

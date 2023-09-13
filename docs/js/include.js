@@ -11,8 +11,7 @@ function innerHTML_file(elem, file, render) {
                     {
                         include_len = document.getElementsByTagName("include").length
                         markdown_len = document.getElementsByTagName("markdown").length
-                        // elem.innerHTML = this.responseText;
-                        $(elem).html(this.responseText);
+                        elem.innerHTML = this.responseText;
                         if (markdown_len < document.getElementsByTagName("markdown").length)
                             includeMD();
                         if (include_len < document.getElementsByTagName("include").length)
@@ -55,5 +54,5 @@ function includeMD() {
 }
 
 function include() {
-    includeHTML();
+    includeHTML()
 }

@@ -1,17 +1,4 @@
 
-:root {
-    --main-max-width: 1280px;
-    --main-color: #0a212a;
-    --main-background-color: #ffffff;
-    /* dark */
-    --main-color-dark: #ffffff;
-    --main-background-color-dark: #0a212a;
-    /* light */
-    --main-color-light: #0a212a;
-    --main-background-color-light: #ffffff;
-}
-
-
 #main {
 	background-color: #fff;
 	position: relative;

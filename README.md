@@ -1,39 +1,16 @@
 # liebespaar93.github.io
 
+# 이미지 참조 
+ [제딧/9Jedit](https://twitter.com/9Jedit)
 
-
-# tag 커스텀
-## include 
-### include-md
-- 'include-md' attribute 를 사용하여 '.md' 파일을 remarkable.js 라이브러리를 사용해 랜더링 해준다.
-### include-html
-- 'include-html' attribute를 사용하여 '.html' 파일을 넣어준다.
-- <span style="color:yellow">주의</span>  
-    외부 파일에 \<body\> 테그로 묶여 있어야 합니다.
-    ``` bash title='Tree'
-    ├── mdfile
-    │   └── info.md
-    ├── pages
-    │   └── nav.html
-    └── index.html
-    ```
-    ``` markdown title='/mdfile/info.md'
-    # 마크다운 입니다
-    ## info.md 파일을 불러옵니다
-    ```
-
-    ``` html title='/pages/nav.html'
-    <body>
-        <p> nav.html입니다 </p>
-    </body>
-    ```
-
-    ``` html title='index.html'
-    <html>
-    <body>
-        <include include-html='/pages/nav'></include>
-        <include include-md='/mdfile/info.md'></include>
-    <body>
-    </html>
-    ```
-
+# gitgraph
+[gitgraph](https://www.nicoespeon.com/gitgraph.js/#15)
+- 나중에 나의 깃에 commit 내역을 액션하여 출력하는 방식을 준비해야함
+- api 가져오는법 
+[공식 문서](https://docs.github.com/en/rest/commits/commits?)apiVersion=2022-11-28
+https://api.github.com/repos/liebespaar93/liebespaar93.github.io/commits
+![Alt text](./images/gitgraph.png)
+# 공부할거 
+[깃 에대하여](https://www.atlassian.com/ko/git/tutorials/learn-git-with-bitbucket-cloud)
+[w3c](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0)
+[esmodule에관하여](https://zubetcha.tistory.com/entry/Javascript-ES-Module)

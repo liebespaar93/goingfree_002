@@ -10,8 +10,8 @@ function table_contents_toggle()
 
 function contents_darkmode_toggle()
 {
-    darkmode_toggle_template("--note-color");
-    darkmode_toggle_template("--note-background-color");
+    // darkmode_toggle_template("--note-color");
+    // darkmode_toggle_template("--note-background-color");
     darkmode_toggle_template("--table-contents-color");
     darkmode_toggle_template("--table-contents-background-color");
     darkmode_toggle_template("--table-contents-line-color");

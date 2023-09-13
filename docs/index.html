@@ -35,16 +35,16 @@
 	<script src="./js/include.js"></script>
 	<script src="./js/header/header.js"></script>
 	<script src="./js/main/contents.js"></script>
+	<script src="./js/main/main.js"></script>
+	<script src="./js/main/home.js"></script>
 	<script src="./js/tools/event-ctr.js"></script>
 	<script src="./js/tools/wave.js"></script>
 	<script src="./js/tools/markdown.js"></script>
-	<script src="./js/highlight/highlight.js"></script>
 	<script src="./js/tools/darkmode.js"></script>
+	<script src="./js/highlight/highlight.js"></script>
 
 
 	<script src="./js//lib/gitgraph_1.4.0.js"></script>
-
-	<script type="module" src="./js/main/main.js"></script>
 </head>
 
 <body>
@@ -56,6 +56,9 @@
 		<include include-html="./pages/main/darkmode.html"></include>
 		<include include-html="./pages/main/main.html"></include>
 	</div>
+	
+	<script>
+		include();
+	</script>
 </body>
-
 </html>

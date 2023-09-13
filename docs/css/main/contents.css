@@ -13,8 +13,8 @@
         --table-contents-background-color-light: #b5ababa9;
         --table-contents-line-color-light: #ffffffdd;
     /* note */
-    --note-color: var(--main-color);
-    --note-background-color: var(--main-background-color);
+    --note-color: #323232;
+    --note-background-color: #ffffff;
         /** dark mode **/
         --note-color-dark: #ffffff;
         --note-background-color-dark: #323232;
